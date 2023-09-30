@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "css": ["focus-mode.css"],
+      "matches": ["https://*/*"]
+    }
+  ],
+
+  "name": "Fat Scroll",
+  "description": "Make the scrollbar thicc",
+  "version": "1.0"
+  // "permissions": ["activeTab", "scripting"]
+}
