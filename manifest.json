@@ -6,8 +6,13 @@
       "matches": ["https://*/*"]
     }
   ],
-
-  "name": "Fat Scroll",
-  "description": "Make the scrollbar thicc",
+  "icons": {
+    "16": "128.png",
+    "32": "128.png",
+    "48": "128.png",
+    "128": "128.png"
+  },
+  "name": "Fat Rolls",
+  "description": "Make scrollbars thicc",
   "version": "1.0"
 }
