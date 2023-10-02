@@ -1,18 +1,21 @@
 {
   "manifest_version": 3,
-  "content_scripts": [
-    {
-      "css": ["style.css"],
-      "matches": ["https://*/*"]
-    }
-  ],
-  "icons": {
-    "16": "128.png",
-    "32": "128.png",
-    "48": "128.png",
-    "128": "128.png"
+  // "content_scripts": [
+  //   {
+  //     "css": ["style.css"],
+  //     "matches": ["https://*/*"]
+  //   }
+  // ],
+  "name": "Fat Scroll",
+  "description": "Make the scrollbar thicc",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html"
   },
-  "name": "Fat scRolls",
-  "description": "Make scrollbars thicc",
-  "version": "1.0"
+  "icons": { "128": "128.png" },
+  // "background": {
+  //   "service_worker": "background.js"
+  // },
+  "permissions": ["activeTab", "scripting", "tabs"],
+  "host_permissions": ["<all_urls>"]
 }

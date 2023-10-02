@@ -5,3 +5,7 @@
 ::-webkit-scrollbar {
   width: 20px !important;
 }
+
+* {
+  color: red;
+}
