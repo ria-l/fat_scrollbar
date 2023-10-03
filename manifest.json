@@ -1,11 +1,11 @@
 {
   "manifest_version": 3,
-  // "content_scripts": [
-  //   {
-  //     "css": ["style.css"],
-  //     "matches": ["https://*/*"]
-  //   }
-  // ],
+  "content_scripts": [
+    {
+      "css": ["default.css"],
+      "matches": ["https://*/*"]
+    }
+  ],
   "name": "Fat Scroll",
   "description": "Make the scrollbar thicc",
   "version": "1.0",
@@ -13,9 +13,6 @@
     "default_popup": "popup.html"
   },
   "icons": { "128": "128.png" },
-  // "background": {
-  //   "service_worker": "background.js"
-  // },
   "permissions": ["activeTab", "scripting", "tabs"],
   "host_permissions": ["<all_urls>"]
 }
