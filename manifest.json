@@ -12,7 +12,10 @@
     "48": "128.png",
     "128": "128.png"
   },
-  "name": "Fat Rolls",
-  "description": "Make scrollbars thicc",
-  "version": "1.0"
+  "name": "ScrollHearts",
+  "description": "Make scrollbars visible and wider for easier dragging + generate string of hearts in popup.",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html"
+  }
 }
