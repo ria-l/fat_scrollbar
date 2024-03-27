@@ -1,13 +1,26 @@
 document.getElementById('button').onclick = myf;
 
-// Yes I know this isn't elegant, no I don't care.
 function myf() {
-  var hearts =
-      ['🩷', '❤️', '🧡', '💛', '💚', '🩵', '💙', '💜', '🤎', '🖤', '🩶', '🤍'];
-  var random1 = Math.floor(Math.random() * hearts.length - 1 + 1);
-  var random2 = Math.floor(Math.random() * hearts.length - 1 + 1);
-  var random3 = Math.floor(Math.random() * hearts.length - 1 + 1);
-  var heart_string = hearts[random1] + hearts[random2] + hearts[random3] +
-      hearts[random3] + hearts[random2] + hearts[random1];
+  let hearts = [
+    '🩷',
+    '❤️',
+    '🧡',
+    '💛',
+    '💚',
+    '🩵',
+    '💙',
+    '💜',
+    '🤎',
+    '🖤',
+    '🩶',
+    '🤍',
+  ];
+  const picks = [];
+  let heart_string = '';
+  for (let i = 0; i < 3; i++) {
+    const n = Math.floor(Math.random() * hearts.length);
+    const picked = hearts.splice(n, 1)[0];
+    heart_string = `${picked}${heart_string}${picked}`;
+  }
   document.getElementById('hearts').textContent = heart_string;
 }
