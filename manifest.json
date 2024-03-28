@@ -2,15 +2,15 @@
   "manifest_version": 3,
   "content_scripts": [
     {
-      "css": ["default.css"],
+      "css": ["style.css"],
       "matches": ["https://*/*"]
     }
   ],
-  "name": "Fat Scroll",
-  "description": "Make the scrollbar thicc",
-  "version": "1.0",
-  "action": {
-    "default_popup": "popup.html"
+  "icons": {
+    "16": "128.png",
+    "32": "128.png",
+    "48": "128.png",
+    "128": "128.png"
   },
   "name": "ScrollHearts",
   "description": "Make scrollbars visible and wider for easier dragging + generate string of hearts in popup.",
