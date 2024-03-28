@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "content_scripts": [
     {
-      "css": ["style.css"],
+      "css": ["default.css"],
       "matches": ["https://*/*"]
     }
   ],
