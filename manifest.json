@@ -12,7 +12,10 @@
   "action": {
     "default_popup": "popup.html"
   },
-  "icons": { "128": "128.png" },
-  "permissions": ["activeTab", "scripting", "tabs"],
-  "host_permissions": ["<all_urls>"]
+  "name": "ScrollHearts",
+  "description": "Make scrollbars visible and wider for easier dragging + generate string of hearts in popup.",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html"
+  }
 }

@@ -1,23 +1,26 @@
-async function changeBodyClass() {
-  let queryOptions = { active: true, lastFocusedWindow: true };
-  // `tab` will either be a `tabs.Tab` instance or `undefined`.
-  let [tab] = await chrome.tabs.query(queryOptions);
+document.getElementById('button').onclick = myf;
 
-  // Execute script in the current tab
-  await chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    func: () => {
-      body = document.getElementsByTagName('body');
-      for (let i = 0; i < body.length; i++) {
-        body[i].classList.add('fatscrollbarsarecool');
-      }
-    },
-  });
-  await chrome.scripting.insertCSS({
-    target: { tabId: tab.id },
-    css: `.fatscrollbarsarecool {::-webkit-scrollbar-thumb {background-color: red !important;}`,
-  });
+function myf() {
+  let hearts = [
+    '🩷',
+    '❤️',
+    '🧡',
+    '💛',
+    '💚',
+    '🩵',
+    '💙',
+    '💜',
+    '🤎',
+    '🖤',
+    '🩶',
+    '🤍',
+  ];
+  const picks = [];
+  let heart_string = '';
+  for (let i = 0; i < 3; i++) {
+    const n = Math.floor(Math.random() * hearts.length);
+    const picked = hearts.splice(n, 1)[0];
+    heart_string = `${picked}${heart_string}${picked}`;
+  }
+  document.getElementById('hearts').textContent = heart_string;
 }
-document.getElementById('button').addEventListener('click', function () {
-  changeBodyClass();
-});
