@@ -1,4 +1,8 @@
-document.getElementById('button').addEventListener('click', function () {
+document.getElementById('notify').addEventListener('click', function() {
+  notify();
+});
+
+document.getElementById('button').addEventListener('click', function() {
   myf(false, 'mirror');
   myf(true, 'mirror');
   myf(false, 'random');
@@ -6,46 +10,13 @@ document.getElementById('button').addEventListener('click', function () {
 });
 
 function myf(dupe, type) {
-  const hearts = dupe
-    ? [
-        '🩷',
-        '❤️',
-        '🧡',
-        '💛',
-        '💚',
-        '🩵',
-        '💙',
-        '💜',
-        '🖤',
-        '🩶',
-        '🤍',
-        '💖',
-        '🩷',
-        '❤️',
-        '🧡',
-        '💛',
-        '💚',
-        '🩵',
-        '💙',
-        '💜',
-        '🖤',
-        '🩶',
-        '🤍',
-        '💖',
-        '🩷',
-        '❤️',
-        '🧡',
-        '💛',
-        '💚',
-        '🩵',
-        '💙',
-        '💜',
-        '🖤',
-        '🩶',
-        '🤍',
-        '💖',
-      ]
-    : ['🩷', '❤️', '🧡', '💛', '💚', '🩵', '💙', '💜', '🖤', '🩶', '🤍', '💖'];
+  const hearts = dupe ?
+      [
+        '🩷', '❤️', '🧡', '💛', '💚', '🩵', '💙', '💜', '🖤', '🩶', '🤍', '💖',
+        '🩷', '❤️', '🧡', '💛', '💚', '🩵', '💙', '💜', '🖤', '🩶', '🤍', '💖',
+        '🩷', '❤️', '🧡', '💛', '💚', '🩵', '💙', '💜', '🖤', '🩶', '🤍', '💖',
+      ] :
+      ['🩷', '❤️', '🧡', '💛', '💚', '🩵', '💙', '💜', '🖤', '🩶', '🤍', '💖'];
   let heart_string = '';
   const x = type == 'mirror' ? 3 : 6;
   for (let i = 0; i < x; i++) {
@@ -72,4 +43,15 @@ function myf(dupe, type) {
         break;
     }
   }
+}
+
+function notify() {
+  chrome.notifications.create({
+    title: 'Ping',
+    message: 'What are you up to?',
+    iconUrl: '/128.png',
+    type: 'basic',
+    priority: 2,
+    requireInteraction: true
+  })
 }
