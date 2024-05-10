@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "content_scripts": [
     {
-      "css": ["default.css"],
+      "css": ["style.css"],
       "matches": ["https://*/*"]
     }
   ],
@@ -17,5 +17,6 @@
   "version": "1.0",
   "action": {
     "default_popup": "popup.html"
-  }
+  },
+  "permissions": ["notifications", "alarms"]
 }
